@@ -8,4 +8,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: self-healing-operator
 repo: github.com/andriy-zh-ua/self-healing-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: a2solutions.ca
+  group: selfhealing
+  kind: SelfHealing
+  path: github.com/andriy-zh-ua/self-healing-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"

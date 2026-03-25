@@ -1,0 +1,9 @@
+apiVersion: selfhealing.a2solutions.ca/v1alpha1
+kind: SelfHealing
+metadata:
+  labels:
+    app.kubernetes.io/name: self-healing-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: selfhealing-sample
+spec:
+  # TODO(user): Add fields here

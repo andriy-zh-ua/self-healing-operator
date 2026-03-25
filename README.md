@@ -8,6 +8,7 @@ The self-healing operator monitors deployments and automatically responds to com
 - **Too many restarts**: Detects when pods are restarting frequently
 - **High memory usage**: Identifies memory pressure and resource exhaustion
 - **Failing health probes**: Responds to failed liveness and readiness probes
+- **Unhealthy pods**: Detects pods in failed or pending states 
 
 ### Automatic Actions
 - **Restart pods**: Automatically restart problematic pods

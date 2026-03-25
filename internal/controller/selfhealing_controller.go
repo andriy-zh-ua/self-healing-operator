@@ -47,9 +47,9 @@ type SelfHealingReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.23.1/pkg/reconcile
 func (r *SelfHealingReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = logf.FromContext(ctx)
+	logf := logf.FromContext(ctx)
 
-	// TODO(user): your logic here
+	logf.Info("SelfHealingApp reconciler triggered", "name", req.Name)
 
 	return ctrl.Result{}, nil
 }

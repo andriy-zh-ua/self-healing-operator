@@ -64,6 +64,9 @@ spec:
           - --leader-elect
           - --health-probe-bind-address=:8081
         image: controller:latest
+        # Tells Kubernetes when it should download a container image from a registry (like Docker Hub).
+        # Use the image that already exists on the node. Only download it if it is not there.
+        imagePullPolicy: IfNotPresent
         name: manager
         ports: []
         securityContext:

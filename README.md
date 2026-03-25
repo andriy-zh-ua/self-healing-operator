@@ -1,2 +1,20 @@
 # self-healing-operator
-Build a Kubernetes operator that monitors application health and automatically repairs problems.
+
+## Features
+
+The self-healing operator monitors deployments and automatically responds to common issues:
+
+### Monitored Conditions
+- **Too many restarts**: Detects when pods are restarting frequently
+- **High memory usage**: Identifies memory pressure and resource exhaustion
+- **Failing health probes**: Responds to failed liveness and readiness probes
+
+### Automatic Actions
+- **Restart pods**: Automatically restart problematic pods
+- **Scale replicas**: Adjust replica count based on conditions
+- **Recreate deployment**: Force recreation of the entire deployment when needed
+- **Notify Slack/webhook**: Send alerts to external monitoring systems
+
+## Usage
+
+The operator continuously watches deployments in the cluster and applies healing policies based on configurable thresholds and rules.
